@@ -60,6 +60,7 @@ h1 {
   padding: 1.5rem 1rem 1rem 1rem;
   position: relative;
   z-index: 0;
+  font-size: 1.2rem;
 }
 
 .intro {
@@ -73,12 +74,21 @@ h1 {
   margin: 0 auto;
 }
 
+
+
 /* Desktop  */
 @media only screen and (min-width: 500px) {
 
   header {
     width: 90%;
   }
+
+  #main-layout {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+   }
 
   #sticky {
     align-items: center;
@@ -87,10 +97,16 @@ h1 {
     width: 10rem;
     margin-top: 0.5rem;
     border-radius: 1rem;
-    border: solid 0.1rem #d7a3bd;
+    /* border: solid 0.1rem #d7a3bd; */
+    box-shadow: 0.2rem 0.25rem #283618;
     position:sticky;
     left: 5%;
     top: 0;
   }
+nav {
+  display:flex;
+  flex-direction:column;
+}
+
 
 }
