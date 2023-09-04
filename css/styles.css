@@ -2,3 +2,35 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #bbb891;
+  color: #283618;
+}
+
+/* Mobile first  */
+
+h2, h3 {
+  color: #f1c8db;
+}
+
+p, a {
+  color:#283618;
+}
+
+header {
+  background-color: #704c5e;
+  background-image: url(../images/codioful-formerly-gradienta-EOeKdkusGZ4-unsplash.jpg);
+  background-size: cover;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+h1 {
+  color: #bbb891;
+}
+
+/* Desktop  */
+@media only screen and (min-width: 400px) {
+
+}
