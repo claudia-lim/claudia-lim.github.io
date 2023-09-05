@@ -15,13 +15,10 @@ h1, h2, h3, h4 {
 
 /* Mobile first  */
 
-h2, h4 {
-  color: #283618;
-}
-
 a {
   color: #283618;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
 a:hover {
@@ -29,18 +26,18 @@ a:hover {
 }
 
 header {
-  background-color: #704c5e;
+  background-color: #f1c5db;
   background-image: url(../images/codioful-formerly-gradienta-EOeKdkusGZ4-unsplash.jpg);
   background-size: cover;
-  margin: -0.25rem 0.5rem 0 0rem;
+  margin: -0.25rem 0 0 0;
   padding: 1rem;
   width: 100%;
-  height: 40vh;
+  height: 30vh;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   position: relative;
   z-index: 1;
-  box-shadow: 0.2rem 0.25rem #2836187b;
+  box-shadow: 0.25rem 0.25rem #2836187b;
 }
 
 h1 {
@@ -53,6 +50,7 @@ h1 {
 
 .main-layout {
   width: 80%;
+  margin: 0 auto;
 }
 
 #sticky {
@@ -91,7 +89,8 @@ font-size: 1.5rem;
   grid-template-columns: 1fr;
   column-gap: 0.25rem;
   padding: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0.5rem;
+  overflow:hidden;
 
 }
 
@@ -107,46 +106,35 @@ font-size: 1.5rem;
 .divider h2 {
   text-decoration: underline;
   align-self: center;
-  
 }
 
 .project-card {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-shrink: 1;
   align-items: center;
   border: solid 0.1rem #283618;
   border-radius: 0.5rem;
   margin: 1rem 0;
-  padding: 0 0.25rem ;
+  padding: 0 0.25rem;
 
 }
 
 .project-image {
   display: flex;
-  width: 100%;
-  height: 40vh;
   justify-content: center;
 }
 
 .project-card img {
-  width: auto;
-  height: 100%;
+  width: 100%;
+  height: auto;
   padding: 0.25rem 0;
   border-top: solid 1px #283618;
   border-bottom: solid 1px #283618;
 } 
-
-.project-header {
-
-}
-
-.project-text {
-
-}
-
-
-
 
 
 /* Desktop  */
@@ -196,14 +184,22 @@ main {
 #portfolio {
   grid-template-rows: 1fr 9fr;
   grid-template-columns: 1fr 1fr;
+  margin: 0;
 }
 
 #divider-portfolio {
   grid-column: 1/3;
   grid-row: 1/2;
   align-self: stretch;
-
 }
 
+.project-image {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%;
+  height: auto; */
+  align-items:center;
+  justify-content: space-around;
+}
 
 }
