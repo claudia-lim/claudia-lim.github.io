@@ -3,8 +3,10 @@
 }
 
 body {
-  background-color: #f7f5dd;
+  background-color: #f6faeb;
   color: #283618;
+  width: 100%;
+  font-family: 'Abel', Arial, Helvetica, sans-serif;
 }
 
 h1, h2, h3, h4 {
@@ -13,13 +15,17 @@ h1, h2, h3, h4 {
 
 /* Mobile first  */
 
-h2, h3, h4 {
+h2, h4 {
   color: #283618;
 }
 
-p, a {
+a {
   color: #283618;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
+}
+
+a :hover {
+  color:#704c5e;
 }
 
 header {
@@ -45,6 +51,9 @@ h1 {
   width: 60%;
 }
 
+.main-layout {
+}
+
 #sticky {
   display: flex;
   flex-direction: column;
@@ -56,7 +65,8 @@ h1 {
   border-bottom-right-radius: 1rem;
   margin: -1rem 0 0 0;
   padding: 1.5rem 1rem 1rem 1rem;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 0;
   font-size: 1.2rem;
   box-shadow: 0.2rem 0.25rem #2836187b;
@@ -70,34 +80,75 @@ nav {
 
 .intro p{
 font-family: "Bodoni Moda", Georgia, 'Times New Roman', Times, serif;
+font-size: 1.5rem;
 }
+
 
 main{
   margin: 1rem 0;
 }
 
-#portfolio {
-  margin-top: -1.75rem;
+section#portfolio {
+  width: 100%;
+  /* margin-top: -1.75rem; */
   display: grid;
   grid-template-columns: 1fr;
+  /* background-color:#704c5e; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  /* box-shadow: 0.2rem 0.25rem #2836187b; */
+  padding: 0.5rem;
+  margin-bottom: 1rem;
 
 }
 
 .divider {
   width: 100%;
-  padding: 0.5rem 0 0 0;
-  background-color:#704c5e;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  /* padding: 0.5rem 0 0 0; */
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  box-shadow: 0.2rem 0.25rem #2836187b;
+  /* background-color: #f1c5db66; */
+  border-top: solid 1px #283618;
+  border-bottom: solid 1px #283618;
+  /* border-radius: 0.5rem;
 }
 
 .divider h2 {
-  color: #f1c5db;
+  /* color: #f1c5db; */
+  text-decoration: underline;
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid 0.1rem #283618;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  padding: 0 0.25rem ;
+
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  /* border-radius: 0.5rem; */
+  padding: 0.25rem 0;
+  border-top: solid 1px #283618;
+  border-bottom: solid 1px #283618;
+} 
+
+.project-header {
+  /* color: #f7f5dd; */
+  text-decoration: underline;
+}
+
+.project-text {
+  /* color: #f7f5dd; */
+}
+
+
 
 
 
