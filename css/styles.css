@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #f6faeb;
+  background-color: #f5f5f5;
   color: #283618;
   width: 100%;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
@@ -15,27 +15,27 @@ h2, h3, h4 {
 
 /* Mobile first  */
 
-a {
-  color: #e4fbca;
+#sticky a {
+  color: #eff5e7;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
 
-a:hover {
+#sticky a:hover {
   opacity: 0.6;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  align-items: space-around;
+  align-items:baseline;
   background-image: url(../images/ren-ran-bBiuSdck8tU-unsplash.jpg);
   background-size: cover;
   background-position: 50%;
   margin: -0.25rem 0 0 0;
   padding: 2rem;
   width: 100%;
-  height: 40vh;
+  height: auto;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   position: relative;
@@ -45,16 +45,18 @@ header {
 
 h1 {
   color: #ffffff;
-  /* text-transform: uppercase; */
   font-size: 3rem;
-  text-shadow: 0.2rem 0.2rem #2836187d;
+  text-shadow: 0.2rem 0.2rem #283618;
   width: 80%;
   font-family: Borel;
+  background-color: #1a200f8b;
+  border: solid 2px #ffffff;
+
 }
 
 header h2 {
   color: #ffffff;
-  text-shadow: 0.2rem 0.2rem #2836187d;
+  text-shadow: 0.1rem 0.1rem #283618;
 }
 
 .main-layout {
@@ -72,9 +74,8 @@ header h2 {
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   margin: -1rem 0 0 0;
-  padding: 1.5rem 1rem 1rem 1rem;
   position: sticky;
-  top: -1rem;
+  top: 0rem;
   z-index: 0;
   font-size: 1.2rem;
   box-shadow: 0.2rem 0.25rem #05060397;
@@ -84,11 +85,14 @@ nav {
   width: 90%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
 }
 
 .intro p{
 font-family: "Gowun Batang", Georgia, 'Times New Roman', Times, serif;
-font-size: 1.5rem;
+font-size: 1rem;
+padding-top: 1rem;
 color: #ffffff7c;
 }
 
@@ -120,7 +124,7 @@ color: #ffffff7c;
   text-decoration: underline;
 }
 
-.project-card, .about-container{
+.project-card, .about-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -129,6 +133,7 @@ color: #ffffff7c;
   border-radius: 0.5rem;
   margin: 1rem 0;
   padding: 0 0.5rem;
+  box-shadow: 0.2rem 0.25rem #05060397;
 
 }
 
@@ -151,6 +156,32 @@ color: #ffffff7c;
   width: 75%;
 }
 
+.contact-container {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  align-items: center;
+  border: solid 0.1rem #28361874;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  box-shadow: 0.2rem 0.25rem #05060397;
+}
+
+.contact-icon {
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.contact-container a {
+  color: #283618;
+}
+
+.contact-container :hover {
+background-color:#283618;
+color:#ffffff;
+border-radius: 0.5rem;
+}
+
 
 /* Desktop  */
 @media only screen and (min-width: 700px) {
@@ -170,14 +201,13 @@ color: #ffffff7c;
 
   #sticky {
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     border-radius: 1rem;
     position: sticky;
     left: 5%;
-    top: 5vh;
-    padding: 0.5rem;
-
+    top: 2vh;
+    padding: 0 0.5rem 0.5rem;
   }
 
 nav {
