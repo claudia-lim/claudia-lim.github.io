@@ -9,6 +9,7 @@ body {
   color: #283618;
   width: 100%;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
 }
 
 h2,
@@ -171,6 +172,10 @@ nav {
   border-radius: 0.5rem;
 }
 
+footer {
+  text-align: right;
+}
+
 @media only screen and (min-width: 700px) {
   header {
     width: 90%;
@@ -216,7 +221,6 @@ nav {
 
   #portfolio {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 9fr;
     margin: 0;
   }
 
@@ -243,6 +247,10 @@ nav {
 
   .about-text {
     grid-column: 2/3;
+  }
+
+  footer {
+    grid-column: 1/4;
   }
 
   @media only screen and (min-width: 1000px) {
