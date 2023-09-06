@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -9,26 +11,16 @@ body {
   font-family: 'Abel', Arial, Helvetica, sans-serif;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   font-family: "Gowun Batang", Georgia, 'Times New Roman', Times, serif;
-}
-
-/* Mobile first  */
-
-#sticky a {
-  color: #eff5e7;
-  font-family: 'Abel', Arial, Helvetica, sans-serif;
-  text-decoration: none;
-}
-
-#sticky a:hover {
-  opacity: 0.6;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  align-items:baseline;
+  align-items: baseline;
   background-image: url(../images/ren-ran-bBiuSdck8tU-unsplash.jpg);
   background-size: cover;
   background-position: 50%;
@@ -64,7 +56,7 @@ header h2 {
   margin: 0 auto;
 }
 
-#sticky {
+#menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,6 +73,16 @@ header h2 {
   box-shadow: 0.2rem 0.25rem #05060397;
 }
 
+#menu a {
+  color: #eff5e7;
+  font-family: 'Abel', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  opacity: 0.6;
+}
+
 nav {
   width: 90%;
   display: flex;
@@ -89,18 +91,20 @@ nav {
   padding-bottom: 0.5rem;
 }
 
-.intro p{
-font-family: "Gowun Batang", Georgia, 'Times New Roman', Times, serif;
-font-size: 1rem;
-padding-top: 1rem;
-color: #ffffff7c;
+.intro p {
+  font-family: "Gowun Batang", Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  padding-top: 1rem;
+  color: #ffffff7c;
 }
 
 .intro {
   text-align: center;
 }
 
-#portfolio, #about {
+#portfolio,
+#about,
+#contact {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -124,7 +128,9 @@ color: #ffffff7c;
   text-decoration: underline;
 }
 
-.project-card, .about-container {
+.project-card,
+.about-container,
+.contact-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -137,19 +143,21 @@ color: #ffffff7c;
 
 }
 
-.project-image, .about-image {
+.project-image,
+.about-image {
   display: flex;
   justify-content: center;
 }
 
 
-.project-card img , .about-image img{
+.project-card img,
+.about-image img {
   width: 100%;
   height: auto;
   padding: 0.25rem 0;
   border-top: solid 1px #28361874;
   border-bottom: solid 1px #28361874;
-} 
+}
 
 .about-image {
   margin: 1rem 0;
@@ -158,13 +166,9 @@ color: #ffffff7c;
 
 .contact-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   font-size: 2rem;
-  align-items: center;
-  border: solid 0.1rem #28361874;
-  border-radius: 0.5rem;
-  margin: 0.5rem;
-  box-shadow: 0.2rem 0.25rem #05060397;
 }
 
 .contact-icon {
@@ -177,13 +181,11 @@ color: #ffffff7c;
 }
 
 .contact-container :hover {
-background-color:#283618;
-color:#ffffff;
-border-radius: 0.5rem;
+  background-color: #283618;
+  color: #ffffff;
+  border-radius: 0.5rem;
 }
 
-
-/* Desktop  */
 @media only screen and (min-width: 700px) {
   header {
     width: 90%;
@@ -197,9 +199,9 @@ border-radius: 0.5rem;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 2rem auto 0 5%;
-   }
+  }
 
-  #sticky {
+  #menu {
     align-items: center;
     justify-content: space-around;
     width: 100%;
@@ -210,51 +212,49 @@ border-radius: 0.5rem;
     padding: 0 0.5rem 0.5rem;
   }
 
-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-main {
-  padding: 0 1rem;
-}
+  main {
+    padding: 0 1rem;
+  }
 
-.divider h2 {
-  margin: 0 auto;
-}
+  .divider h2 {
+    margin: 0 auto;
+  }
 
-#portfolio {
-  grid-template-rows: 1fr 9fr;
-  grid-template-columns: 1fr 1fr;
-  margin: 0;
-}
+  #portfolio {
+    grid-template-rows: 1fr 9fr;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+  }
 
-#divider-portfolio {
-  grid-column: 1/3;
-  grid-row: 1/2;
-}
+  #divider-portfolio {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
 
-.project-image {
-  display: flex;
-  flex-direction: column;
-}
+  .project-image {
+    display: flex;
+    flex-direction: column;
+  }
 
-.about-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0.5rem;
+  }
 
-  column-gap: 0.5rem;
-}
+  .about-image {
+    grid-column: 1/2;
+    width: 100%;
+  }
 
-.about-image {
-  grid-column: 1/2;
-  width: 100%;
-}
-
-.about-text {
-  grid-column: 2/3;
-}
-
+  .about-text {
+    grid-column: 2/3;
+  }
 }
