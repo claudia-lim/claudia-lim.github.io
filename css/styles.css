@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   color: #283618;
   font-family: 'Gowun Batang', Arial, Helvetica, sans-serif;
   font-size: 1.3rem;
@@ -24,7 +24,7 @@ header {
 }
 
 h1 {
-  color: #f5f5f5;
+  color: #f0f4e3;
   font-size: 3rem;
   text-shadow: 0.2rem 0.2rem 0.2rem #283618;
   font-family: 'Borel', 'Bodoni Moda', serif;
@@ -53,7 +53,7 @@ h1 {
   box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
 }
 nav a {
-  color: #dae3de;
+  color: #f0f4e3;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
@@ -92,7 +92,7 @@ nav {
   align-items: center;
   border-top: solid 0.1rem #28361874;
   border-bottom: solid 0.1rem #28361874;
-  background-color: #dae3de;
+  background-color: #f6f6f6;
   padding: 0.5rem;
   box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
 }
@@ -112,6 +112,7 @@ nav {
   margin: 1rem 0rem;
   padding: 0.5rem;
   box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
+  background-color: #f6f6f6;
 }
 .project-image,
 .about-image {
@@ -125,6 +126,7 @@ nav {
   padding: 0.25rem 0;
   border-top: solid 1px #28361874;
   border-bottom: solid 1px #28361874;
+  display: block;
 }
 .project-card img:hover {
   opacity: 0.6;
