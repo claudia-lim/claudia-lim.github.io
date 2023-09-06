@@ -7,9 +7,8 @@
 body {
   background-color: #f5f5f5;
   color: #283618;
-  width: 100%;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 h2,
@@ -25,7 +24,6 @@ header {
   margin: -0.25rem 0 0 0;
   padding: 2rem;
   width: 100%;
-  height: auto;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
   position: relative;
@@ -36,14 +34,16 @@ header {
 h1 {
   color: #f5f5f5;
   font-size: 3rem;
-  /* text-shadow: 0.2rem 0.2rem #283618; */
-  font-family: 'Borel', serif;
+  text-shadow: 0.2rem 0.2rem 0.2rem #283618;
+  font-family: "Arvo", 'Bodoni Moda', serif;
+  /* font-style: italic; */
+  /* text-transform: uppercase; */
   border-radius: 0.5rem;
-  word-spacing: 0.25rem ;
-  width:fit-content;
+  width: fit-content;
   background-color: #1a200f8b;
-  border: solid 2px #ffc0cb;
-  padding: 2.5rem 0.5rem 0.5rem 0rem;
+  /* padding: 2.5rem 0.5rem 0.5rem 0rem; */ /*for Borel font*/
+  padding: 0.5rem;
+  margin-left: 2.5%;
 
 }
 
@@ -52,11 +52,11 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: flex-start;
+  align-content: center;
   justify-content: space-around;
   background-color: #283618;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   margin: -1rem 0 0 0;
   padding-top: 2rem;
   position: sticky;
@@ -66,15 +66,15 @@ h1 {
   box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
 }
 
-#menu a {
-  color: #FFC0CB;
+nav a {
+  color: #dae3de;
   font-family: 'Abel', Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
 
-#menu a:hover {
+nav a:hover, .project-text a:hover {
   opacity: 0.6;
-  transform: translateY(0.25rem);
+  transform: translateY(-0.25rem);
 }
 
 nav {
@@ -91,10 +91,13 @@ nav {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 0.25rem;
-  /* padding: 0.5rem; */
+  column-gap: 0.3rem;
   margin: 1rem 0rem;
+}
 
+#portfolio-loc, #about-loc, #contact-loc {
+  height: 1.5rem;
+  visibility: hidden;
 }
 
 .divider {
@@ -102,9 +105,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: solid 0.2rem #283618;
-  border-bottom: solid 0.2rem #283618;
-  background-color: #ffc0cb59;
+  border-top: solid 0.1rem #28361874;
+  border-bottom: solid 0.1rem #28361874;
+  background-color: #dae3de;
   padding: 0.5rem;
   box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
 
@@ -122,12 +125,10 @@ nav {
   flex-direction: column;
   align-items: center;
   border: solid 0.1rem #28361874;
-  /* border-top: solid 0.1rem #28361874; */
   border-radius: 0.5rem;
   margin: 1rem 0rem;
   padding: 0.5rem;
   box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
-
 }
 
 .project-image,
@@ -150,8 +151,14 @@ nav {
   opacity: 0.6;
 }
 
+.project-text {
+  align-self: flex-start;
+  padding-left: 0.75rem;
+}
+
 .project-text a{
   color:#283618;
+  font-size: 1.5rem;
 }
 
 .about-image {
@@ -176,7 +183,7 @@ nav {
 
 .contact-container :hover {
   background-color: #283618;
-  color: #ffffff;
+  color: #dae3de;
   border-radius: 0.3rem;
 }
 
@@ -187,41 +194,37 @@ footer {
 
 @media only screen and (min-width: 700px) {
   header {
-    width: 90%;
-    margin: -0.25rem auto 0 auto;
+    /* width: 90%; */
+    margin: 0 auto;
   }
 
   #main-layout {
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    justify-content: flex-start;
     align-items: flex-start;
-    margin: 2rem auto 0 5%;
+    margin: 1rem auto;
   }
 
   #menu {
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    border-radius: 1rem;
-    margin: 0.25rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0.25rem;
     position: sticky;
-    left: 5%;
-    top: 2vh;
-    padding: 0.5rem;
+    top: 3vh;
+    width: 10rem;
+    padding: 1rem;
+    justify-self: center;
   }
 
-  #menu a:hover {
+  nav a:hover, .project-text a:hover {
     transform: translateX(0.25rem);
   }
 
   nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem;
+    padding: 0.4rem;
+    border-left: solid 0.1rem #dae3de;
   }
 
   main {
@@ -229,7 +232,7 @@ footer {
   }
 
   .divider {
-    border: solid 0.1rem #283618;
+    border: solid 0.1rem #28361874;
     border-radius: 0.5rem;
   }
 
@@ -239,7 +242,7 @@ footer {
 
   #portfolio {
     grid-template-columns: 1fr 1fr;
-    margin: 0;
+    margin: 0.5rem;
   }
 
   #divider-portfolio {
