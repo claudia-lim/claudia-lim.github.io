@@ -78,6 +78,7 @@ header h2 {
 
 #menu a:hover {
   opacity: 0.6;
+  transform: translateY(0.25rem);
 }
 
 nav {
@@ -145,13 +146,20 @@ nav {
   border-bottom: solid 1px #28361874;
 }
 
+.project-card img:hover {
+  opacity: 0.6;
+}
+
+.project-text a{
+  color:#283618;
+}
+
 .about-image {
   margin: 1rem 0;
   width: 75%;
 }
 
 .contact-container {
-  display: flex;
   flex-direction: row;
   justify-content: center;
   font-size: 2rem;
@@ -169,7 +177,7 @@ nav {
 .contact-container :hover {
   background-color: #283618;
   color: #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
 }
 
 footer {
@@ -201,6 +209,10 @@ footer {
     left: 5%;
     top: 2vh;
     padding: 0.5rem;
+  }
+
+  #menu a:hover {
+    transform: translateX(0.25rem);
   }
 
   nav {
