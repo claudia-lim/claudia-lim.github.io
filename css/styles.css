@@ -14,7 +14,7 @@ body {
 header {
   background-image: url(../images/joe-mania-QwDGUxlInGY-unsplash.jpg);
   background-size: cover;
-  background-position: 80%;
+  background-position-y: center;
   margin: -0.25rem 0 0 0;
   padding: 2rem;
   width: 100%;
