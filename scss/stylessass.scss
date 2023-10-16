@@ -1,0 +1,279 @@
+$background-color: #eaeaea;
+$main-green: #283618;
+$main-font: 'Gowun Batang', Arial, Helvetica, sans-serif;
+$box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
+$light-text-color: #f0f4e3;
+$card-color: #f6f6f6;
+$second-font: 'Abel', Arial, Helvetica, sans-serif;
+$border-style: solid 0.1rem #28361874;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $background-color;
+  color: $main-green;
+  font-family: $main-font;
+  font-size: 1.3rem;
+}
+
+header {
+  background-image: url(../images/joe-mania-QwDGUxlInGY-unsplash.jpg);
+  background-size: cover;
+  background-position-y: center;
+  margin: -0.25rem 0 0 0;
+  padding: 2rem;
+  width: 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  z-index: 2;
+  position: relative;
+  box-shadow: $box-shadow;
+}
+
+h1 {
+  color: $light-text-color;
+  font-size: 3rem;
+  text-shadow: 0.2rem 0.2rem 0.2rem #0f110d;
+  font-family: 'Borel', 'Bodoni Moda';
+  border-radius: 0.5rem;
+  width: fit-content;
+  background-color: #1a281da0;
+  padding: 2.5rem 0.5rem 0 0.5rem; //*for Borel font*/
+}
+
+#menu {
+  background-color: #1a281d;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  margin: -1rem 0 0 0;
+  padding-top: 2rem;
+  position: sticky;
+  top: 0rem;
+  z-index: 1;
+  font-size: 1.2rem;
+  box-shadow: $box-shadow;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
+
+nav a {
+  color: $light-text-color;
+  font-family: $second-font;
+  text-decoration: none;
+}
+
+nav a:hover {
+  opacity: 0.6;
+  transform: translateY(-0.25rem);
+}
+
+#portfolio,
+#about,
+#contact {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 0.3rem;
+  margin: 1rem 0rem;
+}
+
+#portfolio-location,
+#about-location,
+#contact-location {
+  height: 1.5rem;
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: $border-style;
+  border-bottom: $border-style;
+  background-color: $card-color;
+  padding: 0.5rem;
+  box-shadow: $box-shadow;
+  font-family: $second-font;
+  color: $main-green;
+}
+
+.project-card,
+.about-container,
+.contact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: $border-style;
+  border-radius: 0.5rem;
+  margin: 1rem 0rem;
+  padding: 0.5rem;
+  box-shadow: $box-shadow;
+  background-color: $card-color;
+}
+
+.project-image,
+.about-image,
+.project-image a {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 0.25rem 0;
+}
+
+.project-card img,
+.about-image img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-top: $border-style;
+  border-bottom: $border-style;
+}
+
+.project-card img:hover,
+.project-text a:hover {
+  opacity: 0.6;
+}
+
+.project-text,
+.about-text {
+  padding: 0 0.75rem;
+  color: $main-green;
+}
+
+.project-text a {
+  color: $main-green;
+  font-size: 1.5rem;
+}
+
+.contact-container {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.contact-icon {
+  padding: 0.5rem;
+  font-size: 2rem;
+}
+
+.contact-icon i {
+  color: $main-green;
+  padding: 0.5rem;
+}
+
+.contact-icon i:hover {
+  background-color: $main-green;
+  color: $light-text-color;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
+
+footer {
+  text-align: right;
+  margin: 0 0.25rem;
+}
+
+
+@media only screen and (min-width: 700px) {
+
+  #grid-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: flex-start;
+    margin: 1rem auto;
+  }
+
+  #menu {
+    border-radius: 0.5rem;
+    margin: 1rem 0.25rem;
+    position: sticky;
+    top: 3vh;
+    width: 12rem;
+    padding: 1rem;
+    justify-self: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-left: solid 0.1rem $light-text-color;
+  }
+
+  nav a:hover {
+    transform: translateX(0.5rem);
+  }
+
+  main {
+    padding: 0 1rem;
+    margin: 0 1rem;
+  }
+
+  .divider {
+    border: solid 0.1rem $main-green;
+    border-radius: 0.5rem;
+  }
+
+  .divider h2 {
+    margin: 0 auto;
+  }
+
+  #portfolio {
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5rem;
+  }
+
+  #portfolio .divider {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  .project-image {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-image img,
+  .about-image img {
+    width: 30vh;
+    height: 20vw;
+  }
+
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 0.5rem;
+  }
+
+  .about-image {
+    grid-column: 1/2;
+    width: 100%;
+  }
+
+  .about-text {
+    grid-column: 2/3;
+  }
+
+  footer {
+    grid-column: 1/4;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #portfolio {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.5rem;
+  }
+
+  #portfolio .divider {
+    grid-column: 1/4;
+  }
+}
