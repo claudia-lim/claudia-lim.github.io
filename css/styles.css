@@ -34,7 +34,17 @@ h1 {
   width: fit-content;
   background-color: #1a281da0;
   padding: 2.5rem 0.5rem 0 0.5rem; /*for Borel font*/
-  margin-left: 2.5%;
+
+  animation: test 2s infinite alternate;
+}
+
+@keyframes test {
+  0% {
+    margin-left: 2.5%;
+  }
+  100% {
+    margin-left: 5%;
+  }
 }
 
 #menu {
