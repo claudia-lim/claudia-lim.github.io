@@ -1,13 +1,20 @@
-*,
-*::before,
-*::after {
+$background-color: #eaeaea;
+$main-green: #283618;
+$main-font: 'Gowun Batang', Arial, Helvetica, sans-serif;
+$box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
+$light-text-color: #f0f4e3;
+$card-color: #f6f6f6;
+$second-font: 'Abel', Arial, Helvetica, sans-serif;
+$border-style: solid 0.1rem #28361874;
+
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
-  background-color: #eaeaea;
-  color: #283618;
-  font-family: 'Gowun Batang', Arial, Helvetica, sans-serif;
+  background-color: $background-color;
+  color: $main-green;
+  font-family: $main-font;
   font-size: 1.3rem;
 }
 
@@ -22,29 +29,18 @@ header {
   border-bottom-right-radius: 1rem;
   z-index: 2;
   position: relative;
-  box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
+  box-shadow: $box-shadow;
 }
 
 h1 {
-  color: #f0f4e3;
+  color: $light-text-color;
   font-size: 3rem;
   text-shadow: 0.2rem 0.2rem 0.2rem #0f110d;
   font-family: 'Borel', 'Bodoni Moda';
   border-radius: 0.5rem;
   width: fit-content;
   background-color: #1a281da0;
-  padding: 2.5rem 0.5rem 0 0.5rem; /*for Borel font*/
-
-  animation: test 2s infinite alternate;
-}
-
-@keyframes test {
-  0% {
-    margin-left: 2.5%;
-  }
-  100% {
-    margin-left: 5%;
-  }
+  padding: 2.5rem 0.5rem 0 0.5rem; //*for Borel font*/
 }
 
 #menu {
@@ -57,7 +53,7 @@ h1 {
   top: 0rem;
   z-index: 1;
   font-size: 1.2rem;
-  box-shadow: 0.2rem 0.25rem 0.25rem #1a281dcd;
+  box-shadow: $box-shadow;
 }
 
 nav {
@@ -68,8 +64,8 @@ nav {
 }
 
 nav a {
-  color: #f0f4e3;
-  font-family: 'Abel', Arial, Helvetica, sans-serif;
+  color: $light-text-color;
+  font-family: $second-font;
   text-decoration: none;
 }
 
@@ -99,12 +95,13 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: solid 0.1rem #28361874;
-  border-bottom: solid 0.1rem #28361874;
-  background-color: #f6f6f6;
+  border-top: $border-style;
+  border-bottom: $border-style;
+  background-color: $card-color;
   padding: 0.5rem;
-  box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
-  font-family: 'Abel', Arial, Helvetica, sans-serif;
+  box-shadow: $box-shadow;
+  font-family: $second-font;
+  color: $main-green;
 }
 
 .project-card,
@@ -114,12 +111,12 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 0.1rem #28361874;
+  border: $border-style;
   border-radius: 0.5rem;
   margin: 1rem 0rem;
   padding: 0.5rem;
-  box-shadow: 0.2rem 0.25rem 0.25rem #05060397;
-  background-color: #f6f6f6;
+  box-shadow: $box-shadow;
+  background-color: $card-color;
 }
 
 .project-image,
@@ -136,8 +133,8 @@ nav a:hover {
   width: 80%;
   height: auto;
   object-fit: cover;
-  border-top: solid 1px #28361874;
-  border-bottom: solid 1px #28361874;
+  border-top: $border-style;
+  border-bottom: $border-style;
 }
 
 .project-card img:hover,
@@ -148,33 +145,32 @@ nav a:hover {
 .project-text,
 .about-text {
   padding: 0 0.75rem;
+  color: $main-green;
 }
 
 .project-text a {
-  color: #283618;
+  color: $main-green;
   font-size: 1.5rem;
 }
 
 .contact-container {
   flex-direction: row;
   justify-content: space-evenly;
-
 }
 
 .contact-icon {
   padding: 0.5rem;
   font-size: 2rem;
-
 }
 
 .contact-icon i {
-  color: #283618;
+  color: $main-green;
   padding: 0.5rem;
 }
 
 .contact-icon i:hover {
-  background-color: #283618;
-  color: #f0f4e3;
+  background-color: $main-green;
+  color: $light-text-color;
   border-radius: 0.3rem;
   padding: 0.5rem;
 }
@@ -183,6 +179,7 @@ footer {
   text-align: right;
   margin: 0 0.25rem;
 }
+
 
 @media only screen and (min-width: 700px) {
 
@@ -208,7 +205,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    border-left: solid 0.1rem #f0f4e3;
+    border-left: solid 0.1rem $light-text-color;
   }
 
   nav a:hover {
@@ -221,7 +218,7 @@ footer {
   }
 
   .divider {
-    border: solid 0.1rem #28361874;
+    border: solid 0.1rem $main-green;
     border-radius: 0.5rem;
   }
 
