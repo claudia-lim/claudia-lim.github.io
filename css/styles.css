@@ -11,6 +11,10 @@ body {
   font-size: 1.3rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   background-image: url(../images/joe-mania-QwDGUxlInGY-unsplash.jpg);
   background-size: cover;
@@ -43,7 +47,6 @@ h1 {
     margin-top: -15rem;
   }
   100% {
-
   }
 }
 
@@ -153,6 +156,7 @@ nav a:hover {
 .project-text a {
   color: #283618;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .contact-container {
@@ -195,7 +199,7 @@ footer {
   }
 
   h1 {
-    margin-top: 0;
+    margin-top: 10rem;
   }
 
   #menu {
