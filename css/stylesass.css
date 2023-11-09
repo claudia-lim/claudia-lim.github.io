@@ -54,6 +54,10 @@ nav {
   padding-bottom: 0.5rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav a {
   color: #f0f4e3;
   font-family: "Abel", Arial, Helvetica, sans-serif;
